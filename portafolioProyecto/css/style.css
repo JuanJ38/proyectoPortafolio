@@ -285,3 +285,85 @@ footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--bor
   .proj-icon { width: 40px; height: 40px; }
   .contact-cards { grid-template-columns: 1fr 1fr; }
 }
+
+/* ============================================
+   QR CERTIFICADOS — Integración con UX Juan
+   ============================================ */
+
+.qr-validation-wrapper {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.qr-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: .1em;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.qr-box-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--rl);
+  padding: 1.2rem;
+  max-width: fit-content;
+  transition: border-color .2s, background .2s;
+}
+
+.qr-box-container:hover {
+  border-color: var(--border-h);
+  background: var(--card-h);
+}
+
+.qr-link {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.qr-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff; /* Fondo blanco necesario para lectura del QR */
+  padding: 6px;
+  transition: transform .3s ease;
+}
+
+.qr-link:hover .qr-image {
+  transform: scale(1.05);
+}
+
+.qr-text h4 {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .3rem;
+}
+
+.qr-text p {
+  font-size: .82rem;
+  color: var(--text-2);
+  max-width: 220px;
+  line-height: 1.6;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 500px) {
+  .qr-box-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .qr-text p {
+    max-width: none;
+  }
+}
