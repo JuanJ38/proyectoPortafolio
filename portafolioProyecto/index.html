@@ -3,27 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Juan J. — Ingeniero Informático</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Portafolio - Informática </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  
-  <!-- CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-dot" id="cursorDot"></div>
 
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#inicio" class="nav-brand">JJ<span class="dot">.</span></a>
+      <a href="#inicio" class="nav-brand">Portafolio<span class="dot"></span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#sobre-mi" data-text="sobre mí">sobre mí</a></li>
-        <li><a href="#experiencia" data-text="experiencia">experiencia</a></li>
-        <li><a href="#proyectos" data-text="proyectos">proyectos</a></li>
-        <li><a href="#educacion" data-text="educación">educación</a></li>
-        <li><a href="#contacto" class="nav-cta" data-text="contacto">contacto</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="mailto:ju@gmail.com" class="nav-cta">Contacto</a></li>
       </ul>
       <button class="burger" id="burger" aria-label="menú">
         <span></span><span></span><span></span>
@@ -33,67 +29,29 @@
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-    <div class="hero-bg-text" aria-hidden="true">DEV</div>
-    <div class="hero-content">
-      <p class="hero-tag reveal"><span class="tag-line"></span>Buscando prácticas pre-profesionales</p>
-      <h1 class="hero-name reveal delay-1">
-        <span class="name-line">Juan</span>
-        <span class="name-line accent">Jose</span>
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Disponible para prácticas pre-profesionales
+      </div>
+      <h1 class="hero-name">
+        <span class="hi">Hola, soy</span>
+        Juan Jose Horna Zea <span class="accent"></span>
       </h1>
-      <p class="hero-role reveal delay-2">
-        Estudiante de <strong>Ingeniería Informática</strong> · 9no ciclo<br>
-        Desarrollo web &amp; móvil · Java · React · Spring Boot
+      <p class="hero-desc">
+        Estudiante de <strong>Ingeniería Informática</strong> en la UNFV, cursando el 9no ciclo.
+        Apasionado por el desarrollo web y móvil. Experiencia con
+        <strong>Java, Spring Boot, React y Kotlin</strong>.
+        Trabajo con metodologías ágiles y bases de datos SQL.
       </p>
-      <div class="hero-actions reveal delay-3">
-        <a href="#proyectos" class="btn btn-fill">Ver proyectos</a>
-        <a href="#contacto" class="btn btn-ghost">Contactarme</a>
+      <div class="hero-actions">
+        <a href="mailto:ju@gmail.com" class="btn btn-fill">Contáctame</a>
+        <a href="https://github.com/JuanJ38" target="_blank" class="btn btn-ghost">GitHub</a>
       </div>
     </div>
-    <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll">
       <span>scroll</span>
       <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- SOBRE MÍ -->
-  <section class="section" id="sobre-mi">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-num">01</span>
-        <h2 class="section-title">Sobre mí</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text reveal delay-1">
-          <p>
-            Estudiante de Ingeniería Informática del 9no ciclo , con experiencia en desarrollo web y móvil.
-            Trabajo con metodologías ágiles como Scrum y me adapto fácilmente a distintos
-            entornos para cumplir objetivos de manera eficiente.
-          </p>
-          <p>
-            Participo activamente en proyectos, como la organización de la Semana de la Electrónica
-            en el Colegio de Ingenieros del Perú. Manejo lenguajes de programación como Java, Python,
-            JavaScript y Kotlin, así como bases de datos SQL y generación de reportes con Power BI.
-          </p>
-          <div class="contact-info">
-            <a href="https://github.com/JuanJ38" target="_blank" class="info-chip">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              github.com/JuanJ38
-            </a>
-            <a href="mailto:ju@gmail.com" class="info-chip">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-              ju@gmail.com
-            </a>
-            <span class="info-chip">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Jr. Los Tomillos 452, SJL
-            </span>
-          </div>
-        </div>
-        <div class="skills-panel reveal delay-2">
-          <p class="skills-label">// stack técnico</p>
-          <div class="skills-grid" id="skillsGrid"></div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -101,8 +59,9 @@
   <section class="section section-dark" id="experiencia">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-num">02</span>
-        <h2 class="section-title">Experiencia</h2>
+        <span class="section-num">01</span>
+        <h2 class="section-title">Experiencia laboral</h2>
+        <div class="section-line"></div>
       </div>
       <div class="timeline" id="timeline"></div>
     </div>
@@ -112,30 +71,91 @@
   <section class="section" id="proyectos">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-num">03</span>
+        <span class="section-num">02</span>
         <h2 class="section-title">Proyectos</h2>
+        <div class="section-line"></div>
       </div>
       <div class="projects-grid" id="projectsGrid"></div>
     </div>
   </section>
 
+  <!-- SOBRE MÍ -->
+  <section class="section section-dark" id="sobre-mi">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid-wrapper">
+  <div class="about-body reveal delay-1">
+        <p>
+          Me llamo <strong>Juan Jose</strong>. Empecé a programar en la universidad y desde entonces
+          no he parado. Actualmente estoy en <strong>9no ciclo de Ingeniería Informática</strong>
+          en la Universidad Nacional Federico Villarreal.
+        </p>
+        <p>
+          Tengo experiencia real trabajando como <strong>Asistente Informático en la UNFV</strong>,
+          donde administré bases de datos y generé reportes con Power BI. También desarrollé
+          aplicaciones web con Java y React como freelance, y una app móvil con Kotlin.
+        </p>
+        <p>
+          Participo activamente en proyectos universitarios, como la organización de la
+          <strong>Semana de la Electrónica</strong> en el Colegio de Ingenieros del Perú.
+          Me adapto rápido a nuevos entornos y disfruto trabajar en equipo.
+        </p>
+        <div class="contact-info">
+          <a href="https://github.com/JuanJ38" target="_blank" class="info-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            github.com/JuanJ38
+          </a>
+          <a href="mailto:ju@gmail.com" class="info-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+            juanjosehorna16@gmail.com
+          </a>
+          <span class="info-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+             Lima, Perú
+          </span>
+          <a href="tel:+51987654321" class="info-chip">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+  </svg>
+   930 271 941
+</a>
+        </div>
+      </div>
+      
+  <div class="about-photo reveal delay-2">
+    <img src="assets/foto.jpeg" alt="Juan Jose" />
+  </div>
+</div>
+      <div class="skills-panel reveal delay-2">
+        <p class="skills-label">// habilidades técnicas</p>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- EDUCACIÓN -->
-  <section class="section section-dark" id="educacion">
+  <section class="section" id="educacion">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-num">04</span>
         <h2 class="section-title">Educación &amp; Certificados</h2>
+        <div class="section-line"></div>
       </div>
       <div class="edu-grid" id="eduGrid"></div>
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section class="section" id="contacto">
-    <div class="container contact-container">
+  <section class="section section-dark" id="contacto">
+    <div class="container">
       <div class="section-header reveal">
         <span class="section-num">05</span>
-        <h2 class="section-title">Hablemos</h2>
+        <h2 class="section-title">Contacto</h2>
+        <div class="section-line"></div>
       </div>
       <p class="contact-sub reveal delay-1">
         Disponible para prácticas pre-profesionales. ¡Escríbeme y coordinamos!
@@ -145,8 +165,8 @@
   </section>
 
   <footer>
-    <p>Diseñado &amp; construido por <span class="accent-text">Juan Julca</span> · 2025</p>
-    <p class="footer-sub">Ingeniería Informática · UNFV</p>
+    <p>© 2025 <span class="accent-text">Juan Jose</span>. Todos los derechos reservados.</p>
+    <p class="footer-sub">Ingeniería Informática · UNFV · Lima, Perú</p>
   </footer>
 
   <script src="js/data.js"></script>
