@@ -11,11 +11,11 @@ const DATA = {
     { name: "JavaScript",     level: 75 },
     { name: "HTML / CSS",     level: 85 },
     { name: "Kotlin",         level: 65 },
-    { name: "Python",         level: 65 },
+    { name: "Python",         level: 60 },
     { name: "SQL / MySQL",    level: 80 },
     { name: "Power BI",       level: 60 },
     { name: "Git / GitHub",   level: 75 },
-    { name: "Scrum",          level: 70 },
+    { name: "Scrum",          level: 85 },
     { name: "Linux",          level: 55 },
   ],
 
@@ -70,9 +70,9 @@ const DATA = {
       link:   "https://github.com/JuanJ38",
     },
     {
-      title:  "Dashboard con Power BI",
+      title:  "Aplicacion de Escritorio ",
       desc:   "Reportes y visualizaciones de datos para la UNFV. Modelado de datos, consultas SQL avanzadas e integración con Excel.",
-      tags:   ["Power BI", "SQL", "Excel"],
+      tags:   ["Java", "SQL", "Excel"],
       icon:   "📊",
       link:   "#",
     },
@@ -124,10 +124,10 @@ const DATA = {
   ],
 
   contact: [
-    { label: "Email",    value: "ju@gmail.com",            href: "mailto:ju@gmail.com",                   icon: "email" },
+    { label: "Email",    value: "juanjosehorna16@gmail.com",            href: "mailto:ju@gmail.com",                   icon: "email" },
     { label: "GitHub",   value: "github.com/JuanJ38",      href: "https://github.com/JuanJ38",            icon: "github" },
     { label: "LinkedIn", value: "Tu perfil LinkedIn",      href: "https://linkedin.com/in/tu-perfil",     icon: "linkedin" },
-    { label: "Ubicación",value: "Jr. Los Tomillos 452, SJL", href: "#",                                   icon: "location" },
+    { label: "Ubicación",value: "Lima", href: "#",                                   icon: "location" },
   ],
 
 };
