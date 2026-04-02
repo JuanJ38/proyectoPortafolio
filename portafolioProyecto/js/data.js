@@ -57,24 +57,26 @@ const DATA = {
   projects: [
     {
       title:  "Aplicación Web Full Stack",
-      desc:   "App web con Java Spring Boot como backend REST y React en el frontend. CRUD completo con autenticación y conexión a base de datos SQL.",
+      desc:   "App web con Java Spring Boot como backend REST y React en el frontend. CRUD completo con autenticación y conexión a base de datos MSQL.",
       tags:   ["Java", "Spring Boot", "React", "MySQL"],
       icon:   "🌐",
-      link:   "https://github.com/JuanJ38",
+      link:   "https://github.com/JuanJ38/sistemaBiblioteca-springBoot",
+       liveLink: " https://sistemabiblioteca-springboot-production.up.railway.app/login",
+      
     },
     {
       title:  "App Móvil Android",
       desc:   "Aplicación móvil nativa en Android desarrollada con Kotlin. Interfaz moderna con consumo de APIs REST y almacenamiento local.",
       tags:   ["Kotlin", "Android", "REST API"],
       icon:   "📱",
-      link:   "https://github.com/JuanJ38",
+      link:   "https://github.com/JuanJ38/biblioteca-android",
     },
     {
       title:  "Aplicacion de Escritorio ",
-      desc:   "Reportes y visualizaciones de datos para la UNFV. Modelado de datos, consultas SQL avanzadas e integración con Excel.",
-      tags:   ["Java", "SQL", "Excel"],
+      desc:   "Sistema de Gestión de Biblioteca — Aplicación de escritorio en Java Swing con arquitectura MVC, conexión a base de datos MySQL vía JDBC, control de roles (Admin/User).",
+      tags:   ["Java", "SQL", "JDBC"],
       icon:   "📊",
-      link:   "#",
+      link:   "https://github.com/JuanJ38/biblioteca-java",
     },
   ],
 

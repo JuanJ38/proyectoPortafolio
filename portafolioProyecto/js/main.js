@@ -117,6 +117,13 @@ function renderProjects() {
           Ver en GitHub
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </a>
+
+       ${p.liveLink ? `
+<a href="${p.liveLink}" target="_blank" class="proj-link" style="margin-left:8px; background: transparent; color: white; border: 1px solid white; padding: 6px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; display: inline-flex; align-items: center; gap: 4px; font-weight: 500; transition: all 0.2s ease;">
+  🌐 Ver en vivo
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+</a>` : ''}
+
       </div>`;
     grid.appendChild(el);
   });
