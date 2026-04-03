@@ -1,6 +1,4 @@
-// ============================================
-//  MAIN.JS — corregido y limpio
-// ============================================
+
 
 /* ---- Navbar scroll ---- */
 const navbar = document.getElementById('navbar');
