@@ -5,7 +5,6 @@ const DATA = {
   skills: [
     { name: "Java",           level: 85 },
     { name: "Spring Boot",    level: 75 },
-    { name: "React",          level: 40 },
     { name: "JavaScript",     level: 75 },
     { name: "HTML / CSS",     level: 85 },
     { name: "Kotlin",         level: 65 },
@@ -14,7 +13,7 @@ const DATA = {
     { name: "Power BI",       level: 60 },
     { name: "Git / GitHub",   level: 75 },
     { name: "Scrum",          level: 85 },
-    { name: "Linux",          level: 55 },
+    
   ],
 
   experience: [
