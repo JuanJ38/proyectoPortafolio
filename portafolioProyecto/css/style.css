@@ -283,9 +283,8 @@ footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--bor
   .contact-cards { grid-template-columns: 1fr 1fr; }
 }
 
-/* ============================================
-   QR CERTIFICADOS — Integración con UX Juan
-   ============================================ */
+/* 
+   QR CERTIFICADOS  */
 
 .qr-validation-wrapper {
   margin-top: 3rem;
