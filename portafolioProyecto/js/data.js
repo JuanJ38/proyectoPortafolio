@@ -5,7 +5,7 @@ const DATA = {
   skills: [
     { name: "Java",           level: 85 },
     { name: "Spring Boot",    level: 75 },
-    { name: "React",          level: 70 },
+    { name: "React",          level: 40 },
     { name: "JavaScript",     level: 75 },
     { name: "HTML / CSS",     level: 85 },
     { name: "Kotlin",         level: 65 },
@@ -24,7 +24,7 @@ const DATA = {
       period:  "Oct 2025 – Actualidad",
       color:   "accent",
       items: [
-        "Desarrollé aplicaciones web utilizando Java (Spring) y React, implementando funcionalidades CRUD y conexión a bases de datos SQL.",
+        "Desarrollé aplicaciones web utilizando Java (Springboot) y Javacript, implementando funcionalidades CRUD y conexión a bases de datos SQL.",
         "Diseñé interfaces con HTML y CSS enfocadas en usabilidad y rendimiento.",
         "Desarrollé una aplicación móvil en Android utilizando Kotlin.",
       ],
