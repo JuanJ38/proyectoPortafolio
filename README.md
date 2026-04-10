@@ -1,22 +1,36 @@
- Portafolio Personal 
+#  Portafolio Personal  - Link  = >  https://juanj38.github.io/proyectoPortafolio/portafolioProyecto/
 
-Portafolio web personal desarrollado con HTML, CSS y JavaScript puro. Diseño dark con acentos dorados, pensado para mostrar proyectos, experiencia y habilidades como desarrollador.
+> Portafolio web personal desarrollado con HTML, CSS y JavaScript puro. Diseño dark con acentos dorados, pensado para mostrar proyectos, experiencia y habilidades como desarrollador.
 
+---
 
- Vista general
+##  Vista general
+
 El portafolio incluye las siguientes secciones:
-#SecciónDescripción01ExperienciaTimeline de experiencia laboral02ProyectosCards de proyectos con links a GitHub y demo en vivo03Sobre míBio personal + habilidades técnicas con íconos04EducaciónFormación universitaria y certificaciones con QR05ContactoCards de contacto (Email, GitHub, Ubicación)
 
- Tecnologías utilizadas
+| # | Sección | Descripción |
+|---|---------|-------------|
+| 01 | **Experiencia** | Timeline de experiencia laboral |
+| 02 | **Proyectos** | Cards de proyectos con links a GitHub y demo en vivo |
+| 03 | **Sobre mí** | Bio personal + habilidades técnicas con íconos |
+| 04 | **Educación** | Formación universitaria y certificaciones con QR |
+| 05 | **Contacto** | Cards de contacto (Email, GitHub, Ubicación) |
 
-HTML5 — Estructura semántica
-CSS3 — Variables CSS, Flexbox, Grid, animaciones
-JavaScript (Vanilla) — Renderizado dinámico desde data.js, IntersectionObserver, scroll reveal
-DevIcons — Íconos de tecnologías (CDN)
-Google Fonts — Bricolage Grotesque + Space Mono
+---
 
+##  Tecnologías utilizadas
 
- Estructura del proyecto
+- **HTML5** — Estructura semántica
+- **CSS3** — Variables CSS, Flexbox, Grid, animaciones
+- **JavaScript (Vanilla)** — Renderizado dinámico desde `data.js`, IntersectionObserver, scroll reveal
+- **[DevIcons](https://devicon.dev/)** — Íconos de tecnologías (CDN)
+- **[Google Fonts](https://fonts.google.com/)** — Bricolage Grotesque + Space Mono
+
+---
+
+##  Estructura del proyecto
+
+```
 portafolioProyecto/
 ├── index.html          # Página principal
 ├── css/
@@ -27,10 +41,16 @@ portafolioProyecto/
 └── assets/
     ├── foto.jpeg       # Foto de perfil
     └── qr.jpeg         # QR para validación de certificados
+```
 
- Cómo ejecutar localmente
+---
+
+##  Cómo ejecutar localmente
+
 No requiere instalación de dependencias ni build tools.
-bash# 1. Clona el repositorio
+
+```bash
+# 1. Clona el repositorio
 git clone https://github.com/JuanJ38/tu-repo-portafolio.git
 
 # 2. Abre el proyecto
@@ -39,14 +59,19 @@ cd portafolioProyecto
 # 3. Abre index.html en tu navegador
 # Opción A: doble clic en index.html
 # Opción B: usa Live Server en VS Code (recomendado)
+```
+> 💡 **Recomendado:** Instala la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) en VS Code y haz clic en "Go Live".
 
- Recomendado: Instala la extensión Live Server en VS Code y haz clic en "Go Live".
+---
 
+##  Personalización
 
- Personalización
 Toda la información del portafolio está centralizada en un solo archivo:
-js/data.js
-jsconst DATA = {
+
+### `js/data.js`
+
+```js
+const DATA = {
   skills: {
     solid:    [...],   // Dominio sólido
     frequent: [...],   // Uso frecuente
@@ -57,23 +82,46 @@ jsconst DATA = {
   education:  [...],
   contact:    [...],
 };
-Para actualizar el portafolio solo editas este archivo. No necesitas tocar HTML ni CSS.
+```
 
- Habilidades técnicas mostradas
- Dominio sólido
-Java · SQL / MySQL · Scrum
- Uso frecuente
-Spring Boot · JavaScript · HTML / CSS · Git / GitHub
- En aprendizaje / Básico
-Python · Kotlin · Power BI
+Para actualizar el portafolio **solo editas este archivo**. No necesitas tocar HTML ni CSS.
 
- Proyectos destacados
-ProyectoTecnologíasLinksAplicación Web Full StackJava · Spring Boot · React · MySQLGitHub · DemoApp Móvil AndroidKotlin · Android · REST APIGitHubAplicación de EscritorioJava · SQL · JDBCGitHub
+---
 
- Contacto
-MedioDatos  Emailjuanjosehorna16@gmail.com  GitHubgithub.com/JuanJ38  UbicaciónLima, Perú
+##  Habilidades técnicas mostradas
 
-Link  = >  https://juanj38.github.io/proyectoPortafolio/portafolioProyecto/
+###  Dominio sólido
+`Java` · `SQL / MySQL` · `Scrum`
+
+###  Uso frecuente
+`Spring Boot` · `JavaScript` · `HTML / CSS` · `Git / GitHub`
+
+###  En aprendizaje / Básico
+`Python` · `Kotlin` · `Power BI`
+
+---
+
+##  Proyectos destacados
+
+| Proyecto | Tecnologías | Links |
+|----------|-------------|-------|
+| Aplicación Web Full Stack | Java · Spring Boot · React · MySQL | [GitHub](https://github.com/JuanJ38/sistemaBiblioteca-springBoot) · [Demo](https://sistemabiblioteca-springboot-production.up.railway.app/login) |
+| App Móvil Android | Kotlin · Android · REST API | [GitHub](https://github.com/JuanJ38/biblioteca-android) |
+| Aplicación de Escritorio | Java · SQL · JDBC | [GitHub](https://github.com/JuanJ38/biblioteca-java) |
+
+---
+
+##  Contacto
+
+| Medio | Datos |
+|-------|-------|
+|  Email | juanjosehorna16@gmail.com |
+|  GitHub | [github.com/JuanJ38](https://github.com/JuanJ38) |
+|  Ubicación | Lima, Perú |
+
+---
+
+
 
 
 <img width="1857" height="1213" alt="image" src="https://github.com/user-attachments/assets/b2035ef0-fa3c-4dab-b480-6c1c2756cd89" />
