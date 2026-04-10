@@ -60,7 +60,7 @@ cd portafolioProyecto
 # Opción A: doble clic en index.html
 # Opción B: usa Live Server en VS Code (recomendado)
 ```
-> 💡 **Recomendado:** Instala la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) en VS Code y haz clic en "Go Live".
+>  ** Recomendado:** Instala la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) en VS Code y haz clic en "Go Live".
 
 ---
 
