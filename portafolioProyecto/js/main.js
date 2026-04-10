@@ -48,29 +48,68 @@ function observeAll() {
 }
 
 /* ---- RENDER: Skills ---- */
+const deviconMap = {
+  java:       'devicon-java-plain',
+  mysql:      'devicon-mysql-plain',
+  spring:     'devicon-spring-plain',
+  javascript: 'devicon-javascript-plain',
+  html5:      'devicon-html5-plain',
+  github:     'devicon-github-original',
+  python:     'devicon-python-plain',
+  kotlin:     'devicon-kotlin-plain',
+  powerbi:    null,  // no devicon, use custom SVG
+  scrum:      null,  // no devicon, use custom SVG
+  excel:      'devicon-windows8-original',
+};
+
+const customIcons = {
+  powerbi: `<svg viewBox="0 0 32 32" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="4" height="14" x="4" y="18" rx="1" fill="#F2C811"/>
+    <rect width="4" height="20" x="10" y="12" rx="1" fill="#F2C811"/>
+    <rect width="4" height="26" x="16" y="6" rx="1" fill="#F2C811"/>
+    <rect width="4" height="10" x="22" y="22" rx="1" fill="#F2C811" opacity=".6"/>
+  </svg>`,
+  scrum: `<svg viewBox="0 0 36 36" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="2" y="4" width="9" height="28" rx="2" fill="#4CAF50" opacity=".85"/>
+    <rect x="14" y="4" width="9" height="20" rx="2" fill="#4CAF50" opacity=".6"/>
+    <rect x="26" y="4" width="9" height="12" rx="2" fill="#4CAF50" opacity=".4"/>
+    <circle cx="18" cy="10" r="4" fill="none" stroke="#4CAF50" stroke-width="2"/>
+    <path d="M18 6v4l2.5 2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>`,
+};
+
+function skillIcon(sk) {
+  const cls = deviconMap[sk.icon];
+  if (cls) return `<i class="${cls} colored" style="font-size:2rem;"></i>`;
+  return customIcons[sk.icon] || `<i class="devicon-devicon-plain" style="font-size:2rem;"></i>`;
+}
+
 function renderSkills() {
   const grid = document.getElementById('skillsGrid');
   if (!grid) return;
-  DATA.skills.forEach((sk, i) => {
-    const el = document.createElement('div');
-    el.className = 'skill-item';
-    el.innerHTML = `
-      <div class="skill-header">
-        <span class="skill-name">${sk.name}</span>
-        <span class="skill-pct">${sk.level}%</span>
-      </div>
-      <div class="skill-track">
-        <div class="skill-bar" data-width="${sk.level}" style="width:0%"></div>
+
+  const categories = [
+    { key: 'solid',    label: '⭐ Dominio sólido',           items: DATA.skills.solid },
+    { key: 'frequent', label: '🔧 Uso frecuente',            items: DATA.skills.frequent },
+    { key: 'learning', label: '📚 En aprendizaje / Básico',  items: DATA.skills.learning },
+  ];
+
+  categories.forEach(cat => {
+    const group = document.createElement('div');
+    group.className = 'skill-group';
+    group.innerHTML = `<p class="skill-group-label">${cat.label}</p>
+      <div class="skill-icons-row">
+        ${cat.items.map(sk => `
+          <div class="skill-icon-card">
+            <div class="skill-icon-wrap">${skillIcon(sk)}</div>
+            <span class="skill-icon-name">${sk.name}</span>
+          </div>`).join('')}
       </div>`;
-    grid.appendChild(el);
+    grid.appendChild(group);
   });
 }
 
-function animateBars() {
-  document.querySelectorAll('.skill-bar').forEach(bar => {
-    bar.style.width = bar.getAttribute('data-width') + '%';
-  });
-}
+function animateBars() { /* no-op: bars removed */ }
 
 /* ---- RENDER: Timeline ---- */
 function renderTimeline() {

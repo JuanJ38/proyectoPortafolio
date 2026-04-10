@@ -2,36 +2,43 @@
 
 const DATA = {
 
-  skills: [
-    { name: "Java",           level: 85 },
-    { name: "Spring Boot",    level: 75 },
-    { name: "JavaScript",     level: 75 },
-    { name: "HTML / CSS",     level: 85 },
-    { name: "Kotlin",         level: 65 },
-    { name: "Python",         level: 60 },
-    { name: "SQL / MySQL",    level: 80 },
-    { name: "Power BI",       level: 60 },
-    { name: "Git / GitHub",   level: 75 },
-    { name: "Scrum",          level: 85 },
-    
-  ],
+  skills: {
+    solid: [
+      { name: "Java",      icon: "java" },
+      { name: "SQL/MySQL", icon: "mysql" },
+      { name: "Scrum",     icon: "scrum" },
+      { name: "Power BI",  icon: "powerbi" },
+      { name: "Office",     icon: "excel" },
+    ],
+    frequent: [
+      { name: "Spring Boot", icon: "spring" },
+      { name: "JavaScript",  icon: "javascript" },
+      { name: "HTML/CSS",    icon: "html5" },
+      { name: "Git/GitHub",  icon: "github" },
+    ],
+    learning: [
+      { name: "Python",    icon: "python" },
+      { name: "Kotlin",    icon: "kotlin" },
+      
+    ],
+  },
 
   experience: [
     {
-      role:    "Programador Freelance",
-      company: "Independiente",
-      period:  "Oct 2025 – Actualidad",
+      role:    "Proyecto TI",
+      company: "Personal",
+      period:  "Nov 2025 – Actualidad",
       color:   "accent",
       items: [
-        "Desarrollé aplicaciones web utilizando Java (Springboot) y Javacript, implementando funcionalidades CRUD y conexión a bases de datos SQL.",
-        "Diseñé interfaces con HTML y CSS enfocadas en usabilidad y rendimiento.",
-        "Desarrollé una aplicación móvil en Android utilizando Kotlin.",
+        "Desarrollé una solución integral migrando una aplicación de escritorio (Java Swing / SQL Server ) a una arquitectura web moderna con Spring Boot y MySQL.",
+        "Implementé API REST, seguridad y despliegue en la nube (Railway)",
+        
       ],
     },
     {
       role:    "Asistente Informático",
       company: "Universidad Nacional Federico Villarreal",
-      period:  "May 2024 – Dic 2024",
+      period:  "May 2025 – Nov 2025",
       color:   "teal",
       items: [
         "Administré bases de datos, realizando instalación, configuración y actualización de sistemas.",
@@ -42,7 +49,7 @@ const DATA = {
     {
       role:    "Asesor Técnico – Ventas",
       company: "Movistar (Covisian – GSS)",
-      period:  "Mar 2025 – Oct 2025",
+      period:  "Nov 2024  – Mar 2025",
       color:   "gold",
       items: [
         "Asesoré a clientes en servicios de fibra óptica y portabilidad.",
@@ -55,11 +62,27 @@ const DATA = {
     {
       title:  "Aplicación Web Full Stack",
       desc:   "App web con Java Spring Boot como backend REST y React en el frontend. CRUD completo con autenticación y conexión a base de datos MSQL.",
-      tags:   ["Java", "Spring Boot", "React", "MySQL"],
+      tags:   ["Java", "Spring Boot", "Javascript", "MySQL" ," HTML" , "CSS"],
       icon:   "🌐",
       link:   "https://github.com/JuanJ38/sistemaBiblioteca-springBoot",
        liveLink: " https://sistemabiblioteca-springboot-production.up.railway.app/login",
       
+    },
+
+    {
+      title:  "Aplicacion de Escritorio ",
+      desc:   "Sistema de Gestión de Biblioteca — Aplicación de escritorio en Java Swing con arquitectura MVC, conexión a base de datos MySQL vía JDBC, control de roles (Admin/User).",
+      tags:   ["Java", "SQL", "JDBC"],
+      icon:   "📊",
+      link:   "https://github.com/JuanJ38/biblioteca-java",
+    },
+    {
+      title:  "Portafolfio Web ",
+      desc:   "Diseñé y desarrollé un portafolio web  Enfocado en usabilidad, diseño responsivo y rendimiento. ", 
+
+      tags:   ["Javascript", "HTML", "CSS"],
+      icon:   "🌐",
+      link:   "https://github.com/JuanJ38/proyectoPortafolio",
     },
     {
       title:  "App Móvil Android",
@@ -68,13 +91,7 @@ const DATA = {
       icon:   "📱",
       link:   "https://github.com/JuanJ38/biblioteca-android",
     },
-    {
-      title:  "Aplicacion de Escritorio ",
-      desc:   "Sistema de Gestión de Biblioteca — Aplicación de escritorio en Java Swing con arquitectura MVC, conexión a base de datos MySQL vía JDBC, control de roles (Admin/User).",
-      tags:   ["Java", "SQL", "JDBC"],
-      icon:   "📊",
-      link:   "https://github.com/JuanJ38/biblioteca-java",
-    },
+    
   ],
 
   education: [
@@ -125,8 +142,7 @@ const DATA = {
   contact: [
     { label: "Email",    value: "juanjosehorna16@gmail.com",            href: "mailto:ju@gmail.com",                   icon: "email" },
     { label: "GitHub",   value: "github.com/JuanJ38",      href: "https://github.com/JuanJ38",            icon: "github" },
-    { label: "LinkedIn", value: "Tu perfil LinkedIn",      href: "https://linkedin.com/in/tu-perfil",     icon: "linkedin" },
-    { label: "Ubicación",value: "Lima", href: "#",                                   icon: "location" },
+    { label: "Numero",value: " 930 271 941", href: "#",                                   icon: "celular" },
   ],
 
 };
