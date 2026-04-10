@@ -1,7 +1,3 @@
-
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
   --bg:       #141414;
   --bg-2:     #1c1c1c;
@@ -23,6 +19,30 @@
   --rl:       16px;
 }
 
+[data-theme="light"] {
+  --bg:       #f5f5f5;
+  --bg-2:     #ececec;
+  --surface:  #ffffff;
+  --card:     #ffffff;
+  --card-h:   #f0f0f0;
+  --border:   rgba(0,0,0,0.08);
+  --border-h: rgba(0,0,0,0.2);
+  --accent:   #d4a800;
+  --teal:     #0d9488;
+  --green:    #16a34a;
+  --text:     #111111;
+  --text-2:   #555555;
+  --text-3:   #999999;
+}
+
+/* FIX: transición suave + reset en un solo bloque */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.75; overflow-x: hidden; }
 a { text-decoration: none; color: inherit; }
@@ -34,8 +54,9 @@ nav {
   display: flex; justify-content: center; padding: 1rem 1.5rem;
   transition: background .3s, border-bottom .3s;
 }
+/* FIX: nav.scrolled usaba color hardcodeado #141414, ahora usa variable */
 nav.scrolled {
-  background: rgba(20,20,20,0.92);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
@@ -54,6 +75,20 @@ nav.scrolled {
   transition: border-color .2s, background .2s;
 }
 .nav-links a.nav-cta:hover { border-color: var(--border-h); background: var(--surface); }
+
+/* Botón theme toggle */
+#themeToggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 9px;
+  font-size: .95rem;
+  cursor: pointer;
+  color: var(--text);
+  line-height: 1;
+  flex-shrink: 0;
+}
+#themeToggle:hover { border-color: var(--accent); }
 
 .burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: .3rem; }
 .burger span { display: block; width: 22px; height: 1.5px; background: var(--text-2); border-radius: 2px; transition: .3s; }
@@ -119,7 +154,7 @@ nav.scrolled {
   cursor: pointer; border: none; transition: opacity .2s, transform .15s;
 }
 .btn:hover { opacity: .85; transform: translateY(-1px); }
-.btn-fill { background: var(--text); color: #111; }
+.btn-fill { background: var(--text); color: var(--bg); }
 .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .btn-ghost:hover { border-color: var(--border-h); }
 
@@ -143,20 +178,21 @@ nav.scrolled {
 }
 .info-chip:hover { border-color: var(--border-h); color: var(--text); }
 
+/* SKILLS */
 .skills-panel { margin-top: 2.2rem; }
 .skills-label { font-family: var(--mono); font-size: 11px; color: var(--text-3); letter-spacing: .1em; margin-bottom: 1.4rem; }
 .skills-grid { display: flex; flex-direction: column; gap: 1.8rem; }
 
-/* Category group */
-.skill-group { 
+/* FIX: .skill-group tenía las llaves mal puestas, anidaba los selectores */
+.skill-group { }
 .skill-group-label { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: .06em; margin-bottom: .9rem; }
 .skill-icons-row { display: flex; flex-wrap: wrap; gap: 1rem; }
-}
-/* Individual icon card */
+
+/* FIX: border hardcodeado rgba(255,255,255,.07) → var(--border) */
 .skill-icon-card {
   display: flex; flex-direction: column; align-items: center; gap: .45rem;
   background: var(--surface);
-  border: 1px solid rgba(255,255,255,.07);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: .85rem .9rem .7rem;
   min-width: 80px;
@@ -246,45 +282,48 @@ footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--bor
   gap: 2.5rem;
   align-items: start;
 }
-
-.about-photo {
-  flex-shrink: 0;
-}
-
+.about-photo { flex-shrink: 0; }
 .about-photo img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  filter: grayscale(20%);
-  transition: filter .3s;
+  width: 180px; height: 180px; object-fit: cover;
+  border-radius: 16px; border: 1px solid var(--border);
+  filter: grayscale(20%); transition: filter .3s;
 }
+.about-photo img:hover { filter: grayscale(0%); }
 
-.about-photo img:hover {
-  filter: grayscale(0%);
+/* QR CERTIFICADOS */
+.qr-validation-wrapper { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.qr-label {
+  font-family: var(--mono); font-size: 11px; color: var(--text-3);
+  letter-spacing: .1em; margin-bottom: 1.2rem; display: block;
 }
-
-@media (max-width: 640px) {
-  .about-grid-wrapper {
-    grid-template-columns: 1fr;
-  }
-  .about-photo {
-    display: flex;
-    justify-content: center;
-  }
-  .about-photo img {
-    width: 140px;
-    height: 140px;
-  }
+.qr-box-container {
+  display: flex; align-items: center; gap: 1.5rem;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--rl); padding: 1.2rem; max-width: fit-content;
+  transition: border-color .2s, background .2s;
 }
+.qr-box-container:hover { border-color: var(--border-h); background: var(--card-h); }
+.qr-link { flex-shrink: 0; line-height: 0; }
+.qr-image {
+  width: 100px; height: 100px; object-fit: contain;
+  border-radius: 8px; background: #fff;
+  padding: 6px; transition: transform .3s ease;
+}
+.qr-link:hover .qr-image { transform: scale(1.05); }
+.qr-text h4 { font-size: .95rem; font-weight: 600; color: var(--text); margin-bottom: .3rem; }
+.qr-text p { font-size: .82rem; color: var(--text-2); max-width: 220px; line-height: 1.6; }
 
 /* RESPONSIVE */
 @media (max-width: 640px) {
+  .about-grid-wrapper { grid-template-columns: 1fr; }
+  .about-photo { display: flex; justify-content: center; }
+  .about-photo img { width: 140px; height: 140px; }
+
   .burger { display: flex; }
+  /* FIX: menú móvil usaba rgba(20,20,20) hardcodeado → var(--bg) */
   .nav-links {
     display: none; position: fixed; inset: 0;
-    background: rgba(20,20,20,.97);
+    background: color-mix(in srgb, var(--bg) 97%, transparent);
     flex-direction: column; justify-content: center; align-items: center;
     gap: 2rem; z-index: 99;
   }
@@ -297,83 +336,7 @@ footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--bor
   .contact-cards { grid-template-columns: 1fr 1fr; }
 }
 
-/* 
-   QR CERTIFICADOS  */
-
-.qr-validation-wrapper {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
-}
-
-.qr-label {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text-3);
-  letter-spacing: .1em;
-  margin-bottom: 1.2rem;
-  display: block;
-}
-
-.qr-box-container {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--rl);
-  padding: 1.2rem;
-  max-width: fit-content;
-  transition: border-color .2s, background .2s;
-}
-
-.qr-box-container:hover {
-  border-color: var(--border-h);
-  background: var(--card-h);
-}
-
-.qr-link {
-  flex-shrink: 0;
-  line-height: 0;
-}
-
-.qr-image {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  border-radius: 8px;
-  background: #fff; /* Fondo blanco necesario para lectura del QR */
-  padding: 6px;
-  transition: transform .3s ease;
-}
-
-.qr-link:hover .qr-image {
-  transform: scale(1.05);
-}
-
-.qr-text h4 {
-  font-size: .95rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: .3rem;
-}
-
-.qr-text p {
-  font-size: .82rem;
-  color: var(--text-2);
-  max-width: 220px;
-  line-height: 1.6;
-}
-
-/* Ajuste para móviles */
 @media (max-width: 500px) {
-  .qr-box-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-  .qr-text p {
-    max-width: none;
-  }
+  .qr-box-container { flex-direction: column; align-items: center; text-align: center; width: 100%; }
+  .qr-text p { max-width: none; }
 }
