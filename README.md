@@ -124,7 +124,8 @@ Para actualizar el portafolio **solo editas este archivo**. No necesitas tocar H
 
 ######
 
-<img width="1857" height="1213" alt="image" src="https://github.com/user-attachments/assets/b2035ef0-fa3c-4dab-b480-6c1c2756cd89" />
+<img width="1599" height="1234" alt="image" src="https://github.com/user-attachments/assets/792dbb1a-23da-4801-960f-fc8e87ec735c" />
+
 
 ######
 
