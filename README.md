@@ -1,4 +1,4 @@
-#  Portafolio Personal  - Link  = >  https://juanj38.github.io/proyectoPortafolio/portafolioProyecto/
+#  Portafolio Personal  -  https://juanj38.github.io/proyectoPortafolio/portafolioProyecto/
 
 > Portafolio web personal desarrollado con HTML, CSS y JavaScript puro. Diseño dark con acentos dorados, pensado para mostrar proyectos, experiencia y habilidades como desarrollador.
 
