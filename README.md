@@ -91,13 +91,13 @@ Para actualizar el portafolio **solo editas este archivo**. No necesitas tocar H
 ##  Habilidades técnicas mostradas
 
 ###  Dominio sólido
-`Java` · `SQL / MySQL` · `Scrum`
+`Java` · `SQL / MySQL` · `Scrum`  · `Power BI`
 
 ###  Uso frecuente
 `Spring Boot` · `JavaScript` · `HTML / CSS` · `Git / GitHub`
 
 ###  En aprendizaje / Básico
-`Python` · `Kotlin` · `Power BI`
+`Python` · `Kotlin`
 
 ---
 
