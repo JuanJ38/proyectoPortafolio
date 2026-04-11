@@ -106,7 +106,7 @@ Para actualizar el portafolio **solo editas este archivo**. No necesitas tocar H
 | Proyecto | Tecnologías | Links |
 |----------|-------------|-------|
 | Aplicación Web Full Stack | Java · Spring Boot · React · MySQL | [GitHub](https://github.com/JuanJ38/sistemaBiblioteca-springBoot) · [Demo](https://sistemabiblioteca-springboot-production.up.railway.app/login) |
-| App Móvil Android | Kotlin · Android · REST API | [GitHub](https://github.com/JuanJ38/biblioteca-android) |
+| Portafolio WEB | Javascript · CSS · HTML | [GitHub](https://github.com/JuanJ38/proyectoPortafolio) |
 | Aplicación de Escritorio | Java · SQL · JDBC | [GitHub](https://github.com/JuanJ38/biblioteca-java) |
 
 ---
